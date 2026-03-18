@@ -1,3 +1,9 @@
+firebase.auth().onAuthStateChanged((user) => {
+    if (!user) {
+        window.location.href = "login.html";
+    }
+});
+
 // display আইডিটি চেক করা
 const display = document.getElementById('display');
 
