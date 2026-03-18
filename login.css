@@ -1,0 +1,22 @@
+body {
+    background: radial-gradient(circle at center, #0a192f, #020617);
+    height: 100vh; display: flex; justify-content: center; align-items: center;
+    font-family: 'Segoe UI', sans-serif; overflow: hidden; color: white;
+}
+.glass-box {
+    background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(15px);
+    padding: 40px; border-radius: 25px; border: 1px solid rgba(255,255,255,0.1);
+    text-align: center; width: 350px; box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+}
+.logo span { color: #00d2ff; text-shadow: 0 0 10px #00d2ff; }
+input {
+    width: 100%; padding: 12px; margin: 10px 0; background: rgba(0,0,0,0.2);
+    border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; color: white;
+}
+button {
+    width: 100%; padding: 12px; margin-top: 15px; border-radius: 10px;
+    border: none; cursor: pointer; font-weight: bold; transition: 0.3s;
+}
+.login-btn { background: linear-gradient(90deg, #00d2ff, #3a7bd5); color: white; }
+.signup-btn { background: transparent; border: 1px solid #00d2ff; color: #00d2ff; }
+#error-msg { color: #ff5f56; font-size: 12px; margin-top: 10px; }
