@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AYAN OS - Admin Panel</title>
+    <link rel="stylesheet" href="calculator.css">
+    <style>
+        body { background: #000; color: white; padding: 20px; }
+        .admin-table { width: 100%; border-collapse: collapse; margin-top: 20px; font-size: 12px; }
+        .admin-table th, .admin-table td { border: 1px solid #334155; padding: 10px; text-align: left; }
+        .admin-table th { background: #00d2ff; color: black; }
+        .admin-table tr:nth-child(even) { background: #0f172a; }
+        .header { display: flex; justify-content: space-between; align-items: center; }
+        .back-btn { background: #ef4444; color: white; padding: 8px 15px; border-radius: 5px; text-decoration: none; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h2>Admin Panel - Calculation History</h2>
+        <a href="calculator.html" class="back-btn">Back</a>
+    </div>
+
+    <table class="admin-table">
+        <thead>
+            <tr>
+                <th>User Email</th>
+                <th>Expression</th>
+                <th>Result</th>
+                <th>Time</th>
+            </tr>
+        </thead>
+        <tbody id="admin-history-list">
+            </tbody>
+    </table>
+
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
+
+    <script src="admin.js"></script>
+</body>
+</html>
