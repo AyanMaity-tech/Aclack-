@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AYAN OS - Advanced</title>
+    <link rel="stylesheet" href="calculator.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="main-wrapper">
+        <div class="calculator-card">
+            <div class="header">
+                <div class="brand">AYAN <b>OS</b></div>
+                <button onclick="logout()" class="logout-btn">Logout</button>
+            </div>
+            <div class="display-area">
+                <input type="text" id="display" placeholder="0" readonly>
+            </div>
+            <div class="btn-grid">
+                <button class="btn-red" onclick="clearDisplay()">AC</button>
+                <button class="btn-red" onclick="deleteLast()">DEL</button>
+                <button class="btn-sci" onclick="input('**2')">x²</button>
+                <button class="btn-sci" onclick="input('sqrt(')">√</button>
+                <button class="btn-sci" onclick="input('sin(')">sin</button>
+                <button class="btn-sci" onclick="input('cos(')">cos</button>
+                <button class="btn-sci" onclick="input('tan(')">tan</button>
+                <button class="btn-op" onclick="input('/')">÷</button>
+                <button onclick="input('7')">7</button><button onclick="input('8')">8</button><button onclick="input('9')">9</button>
+                <button class="btn-op" onclick="input('*')">×</button>
+                <button onclick="input('4')">4</button><button onclick="input('5')">5</button><button onclick="input('6')">6</button>
+                <button class="btn-op" onclick="input('-')">−</button>
+                <button onclick="input('1')">1</button><button onclick="input('2')">2</button><button onclick="input('3')">3</button>
+                <button class="btn-op" onclick="input('+')">+</button>
+                <button onclick="input('0')">0</button><button onclick="input('.')">.</button>
+                <button class="btn-sci" onclick="input('x')">x</button>
+                <button class="btn-equal" onclick="calculate()">=</button>
+            </div>
+            <div class="feature-buttons">
+                <button class="feat-btn" onclick="showGraph()">Graph Mode</button>
+                <button class="feat-btn" onclick="toggleConverter()">USD to INR</button>
+            </div>
+        </div>
+
+        <div id="currency-container" style="display:none; background:#1e293b; padding:15px; border-radius:15px; margin-top:10px; border:1px solid #38bdf8;">
+            <h3 style="font-size:14px; color:white;">USD to INR</h3>
+            <input type="number" id="usd-input" placeholder="Amount ($)" style="width:100%; margin:10px 0; padding:8px;">
+            <button onclick="convertToRupee()" style="background:#4cd137; width:100%; border:none; padding:8px; border-radius:5px; color:white;">Convert</button>
+            <p id="conv-result" style="color:#4cd137; margin-top:10px; font-weight:bold;"></p>
+        </div>
+
+        <div id="graph-container" style="display:none; background:#1e293b; padding:15px; border-radius:15px; margin-top:10px; border:1px solid #38bdf8;">
+            <canvas id="myChart"></canvas>
+            <button onclick="document.getElementById('graph-container').style.display='none'" style="width:100%; margin-top:10px;">Close</button>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
+    <script src="calculator.js"></script>
+</body>
+          </html>
+          
